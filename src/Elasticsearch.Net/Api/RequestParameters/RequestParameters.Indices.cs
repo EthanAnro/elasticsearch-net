@@ -660,6 +660,13 @@ namespace Elasticsearch.Net.Specification.IndicesApi
 			get => Q<bool? >("only_expunge_deletes");
 			set => Q("only_expunge_deletes", value);
 		}
+
+		///<summary>Should the request wait until the force merge is completed.</summary>
+		public bool? WaitForCompletion
+		{
+			get => Q<bool? >("wait_for_completion");
+			set => Q("wait_for_completion", value);
+		}
 	}
 
 	///<summary>Request options for Get <para>https://www.elastic.co/guide/en/elasticsearch/reference/master/indices-get-index.html</para></summary>
